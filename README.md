@@ -1,3 +1,21 @@
 # CST8277 Assignment #4 - JEE
+This assignment was the final assignment in my CST8277 Enterprise Programming course and was also a group assignment. I had two other classmates assist me in this project. This assignment allows a JEE application with Persistence (JSF client), an Android client (that accesses a REST interface to a database), and a Swing client to connect to a server, with the Swing client showing the UI of Sprites bouncing in a box (similar to <a href="https://github.com/richard1990/CST8277-Assignment3">Assignment 3</a>). The server used was GlassFish 4.1. The JSF client was done using NetBeans, the Swing client was done using Eclipse, and the Android client was done using Android Studio. The application makes use of a MySQL database called "enterprisesprites" and a user named "scott" with the password "tiger". Some of the code is based on code provided by Oracle, while the Android code is based on old code related to connecting to a REST interface (the original app was related to a contacts app).
 
-Coming soon...
+<h2>JSF client</h2>
+The JSF client contains code provided by both my professor and the "address-book" application that Oracle provides as an example of using GlassFish. The JSF client allows one to create a Sprite and specify its attributes (e.g. x-axis position, colour, panel width and height, etc.). Sprites can be edited through the JSF client and upon saving the changes, the new Sprite data will be seen immediately in the Swing client.
+
+Picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/1.png">01</a> shows the JSF client upon launching the app for the first time. Picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/2.png">02</a> shows what it looks like when a new Sprite is created and picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/3.png">03</a> shows what the list of Sprites looks like when Sprites exist in the database.
+
+<h2>Swing client</h2>
+The Swing client allows one to click on an empty space to create a new blue Sprite. When a Sprite is clicked, the Sprite will freeze and its attributes can then be edited (such as its colour or velocity). Upon saving the changes, the Sprite's new information can be seen on the JSF client.
+
+Picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/4.png">04</a> shows the resulting Sprite created in the JSF client in the Swing client (a blue Sprite). Picture <a herf="https://github.com/richard1990/CST8277-Assignment4/blob/master/5.png">05</a> shows what the UI looks like when a Sprite is clicked, which allows the editing of a Sprite's attributes.
+
+<h2>Android client</h2>
+The Android client (called RESTfulSprites) allows the creation of a Sprite through a REST interface. This was the portion of the project I was responsible for. Most of the code was based on a contacts app that I had re-tooled for use in this assignment (including the UI). The app only creates a Sprite, it does not display them. Sprites created with the Android client are a red colour.
+
+Picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/6.png">06</a> shows what the Android client looks like when it is first launched. Picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/7.png">07</a> shows what the UI looks like when a new Sprite is created and picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/8.png">08</a> shows the resulting list of Sprites, which is actually just a local list on the app itself and does not relate to the database used for the server.
+
+Finally, picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/9.png">09</a> shows the resulting Android client-created Sprite in the Swing client (the red Sprite), and picture <a href="https://github.com/richard1990/CST8277-Assignment4/blob/master/10.png">10</a> shows the XML of the Sprites in the RESTful interface.
+
+I was very pleased with this assignment as it contained a lot of neat stuff in it - JEE, Android, RESTful interfaces, JSF pages, and using the GlassFish server. It was probably one of my most favourite assignments I did while I was a student at Algonquin.
